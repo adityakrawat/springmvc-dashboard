@@ -1,4 +1,4 @@
-package com.nexxus.demo;
+package com.demo.app;
 
 import org.springframework.jdbc.core.RowCallbackHandler;
 

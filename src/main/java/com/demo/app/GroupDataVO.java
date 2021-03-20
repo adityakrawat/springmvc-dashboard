@@ -1,4 +1,4 @@
-package com.nexxus.demo;
+package com.demo.app;
 
 public class GroupDataVO {
 

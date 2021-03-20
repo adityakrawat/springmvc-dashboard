@@ -1,4 +1,4 @@
-package com.nexxus.demo;
+package com.demo.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,16 +28,16 @@ public class BostonAnalyzerController {
     public ResponseEntity<List<GroupDataVO>> getBostonAnalyzerData() {
         List<GroupDataVO> groupDataVO = getOffenceCodeGroupsData(null);
         if(groupDataVO.size() > 0)
-            return new ResponseEntity<List<GroupDataVO>>(groupDataVO, HttpStatus.OK);
-        return new ResponseEntity(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(groupDataVO, HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/data/{id}")
     public ResponseEntity<List<GroupDataVO>> getBostonAnalyzerData(@PathVariable("id") Long id) {
         List<GroupDataVO> groupDataVO = getOffenceCodeGroupsData(id);
         if(groupDataVO.size() > 0)
-            return new ResponseEntity<List<GroupDataVO>>(groupDataVO, HttpStatus.OK);
-        return new ResponseEntity(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(groupDataVO, HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     private Map<Integer, String> getOffenceCodeGroups() {
